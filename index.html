@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interusture</title>
+    <script src="app.js" defer></script>
+    <style>
+        /* General reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%; /* Full height for scrolling */
+            overflow-x: hidden; /* Disable horizontal scrolling */
+        }
+
+        /* Header styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background: rgba(255, 248, 240, 0.95); /* Light background for readability */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-title {
+            text-align: left;
+        }
+
+        .header-title h1 {
+            font-size: 2.5rem;
+            color: #5D4037; /* Medium brown */
+            margin: 0;
+        }
+
+        .header-title p {
+            font-size: 1.2rem;
+            color: #795548; /* Slightly lighter brown */
+            margin: 0;
+            font-style: italic;
+        }
+
+        .header-logo img {
+            height: 60px;
+        }
+
+        /* Background setup */
+        .background {
+            background: url('background.webp') no-repeat center center;
+            background-size: cover; /* Full background image */
+            min-height: 100vh; /* Full-screen height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main container styling */
+        main {
+            background: rgba(255, 248, 240, 0.9); /* Light overlay for content readability */
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Gesture text styling */
+        main p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4E342E; /* Brown */
+            margin: 10px 0;
+        }
+
+        #gesture {
+            color: #795548; /* Slightly lighter brown for contrast */
+        }
+
+        /* Gesture image styling */
+        #gestureImage {
+            margin-top: 20px;
+            border: 2px solid #6D4C41; /* Medium brown border */
+            border-radius: 10px;
+            max-width: 100%; /* Responsive image */
+            max-height: 300px;
+            display: none; /* Hidden by default */
+            margin-left: 70px;
+        }
+
+        /* About section styling */
+        .about-section {
+            background: rgba(255, 248, 240, 0.95); /* Light background for readability */
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-section h2 {
+            color: #5D4037; /* Medium brown */
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            color: #6D4C41; /* Slightly darker brown */
+            line-height: 1.6;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            color: #795548;
+            background: rgba(255, 248, 240, 0.9); /* Light background */
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        footer span {
+            color: #D84315; /* Accent color for love */
+        }
+
+        /* Scroll-down hint styling */
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 1.1rem;
+            color: #6D4C41; /* Brown */
+            animation: bounce 2s infinite; /* Bouncing animation */
+        }
+
+        .scroll-down span {
+            display: block;
+        }
+
+        /* Arrow styling for scroll-down */
+        .scroll-down .arrow {
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        /* Bouncing animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Title and Tagline -->
+        <div class="header-title">
+            <h1>Interusture</h1>
+            <p>Gestures make you interact</p>
+        </div>
+        <!-- Logo -->
+        <div class="header-logo">
+            <img src="logo.jpg" alt="Interusture Logo">
+        </div>
+    </header>
+
+    <!-- Background Section -->
+    <section class="background">
+        <main>
+            <p><strong>Detected Gesture:</strong> <span id="gesture">Loading...</span></p>
+            <img id="gestureImage" src="" alt="Gesture Image">
+        </main>
+    </section>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>About Interusture</h2>
+        <p>Hand gestures play a critical role in breaking barriers between individuals with hearing or speech impairments and the rest of the world. Our project, *Interusture*, leverages real-time gesture recognition to enable effective communication for deaf and blind individuals. By converting gestures into actionable interactions, we aim to foster inclusivity and empower those who face challenges in expressing themselves.</p>
+        <p>Through this innovative technology, we aspire to create a world where everyone can interact seamlessly, regardless of their physical limitations.</p>
+    </div>
+
+    <!-- Scroll-down hint -->
+    <div class="scroll-down">
+        <span>Scroll Down</span>
+        <span class="arrow">↓</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Made with <span>❤</span> for people
+    </footer>
+</body>
+</html>
